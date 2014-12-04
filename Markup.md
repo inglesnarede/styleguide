@@ -30,8 +30,6 @@ Blog Inglês na Rede markup code styleguide.
 
 This document is inspired by [Mark Otto's Code Guide](http://mdo.github.io/code-guide/#html), [Harry Roberts's coding style](http://csswizardry.com/2012/04/my-html-css-coding-style) and [Idiomatic HTML](https://github.com/necolas/idiomatic-html).
 
-**[⬆ back to top](#table-of-contents)**
-
 ## Doctype
 
 * Follow HTML5 doctype to enforce standards and a more consistent rendering throughout browsers.
@@ -117,20 +115,19 @@ Internet Explorer supports the use of a document compatibility `<meta>` tag to s
 * The order of attributes should look like:
 	1. Element `id` and/or `name`
 	2. JavaScript class name `js-selector`
-	3. Generic classes (clearfix, grid stuff, etc)
+	3. Generic classes (grid stuff, etc)
 	4. Other classes
 	5. States
 	6. Boolean attributes
   7. Schema Tags
   8. ARIA Attributes
-  9. Data attributes `data-*`
 
 ```html
 <!-- Bad -->
-<div role="section" class="clearfix is-opaque js-button button grid-size-2" id="btn" hidden data-fx="fade"></div>
+<div role="section" class="columns is-opaque js-button button small-2" itemscope="itemscope" id="btn"></div>
 
 <!-- Good -->
-<div id="btn" class="js-button clearfix grid-size-2 is-opaque" data-fx="fade" hidden itemscope="itemscope" role="section"></div>
+<div id="btn" class="js-button is-opaque small-2 columns" itemscope="itemscope" role="section"></div>
 ```
 
 **[⬆ back to top](#table-of-contents)**
